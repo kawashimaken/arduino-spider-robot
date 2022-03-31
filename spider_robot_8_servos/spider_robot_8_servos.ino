@@ -1,6 +1,5 @@
 // STILL WORK IN PROGRESS!!
 
-#include <pt.h>
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 #include <FastLED.h>
@@ -100,7 +99,7 @@ void setup() {
   }
 
 
- stand();
+  stand();
   delay(2000);
 }
 
@@ -335,36 +334,36 @@ void crawl() {
 
 
 }
-void crawl2(){
+void crawl2() {
   int duration = 100;
-  backrighttoe("level",duration);
-  backrightfoot("forward",duration);
-  backrighttoe("down",duration);
+  backrighttoe("level", duration);
+  backrightfoot("forward", duration);
+  backrighttoe("down", duration);
   //step2
-  frontrighttoe("level",duration);
-  frontrightfoot("forward",duration);
-  frontrighttoe("down",duration);
+  frontrighttoe("level", duration);
+  frontrightfoot("forward", duration);
+  frontrighttoe("down", duration);
   //move
-  frontrightfoot("center",duration);
-  backrightfoot("center",duration);
-  frontleftfoot("backward",duration);
-  backleftfoot("backward",duration);
+  frontrightfoot("center", duration);
+  backrightfoot("center", duration);
+  frontleftfoot("backward", duration);
+  backleftfoot("backward", duration);
   //
-  backlefttoe("level",duration);
-  backleftfoot("forward",duration);
-  backlefttoe("down",duration);
+  backlefttoe("level", duration);
+  backleftfoot("forward", duration);
+  backlefttoe("down", duration);
   //
-  frontlefttoe("level",duration);
-  frontleftfoot("forward",duration);
-  frontlefttoe("down",duration);
+  frontlefttoe("level", duration);
+  frontleftfoot("forward", duration);
+  frontlefttoe("down", duration);
   //move
-  frontrightfoot("backward",duration);
-  backrightfoot("backward",duration);
-  frontleftfoot("center",duration);
-  backleftfoot("center",duration);
-  
-  
-  
+  frontrightfoot("backward", duration);
+  backrightfoot("backward", duration);
+  frontleftfoot("center", duration);
+  backleftfoot("center", duration);
+
+
+
 }
 //
 void swing() {
@@ -436,29 +435,29 @@ void testSeq() {
   //
   //  step1();
   //  step2();
-//   crawl();
-   crawl2();
+  //   crawl();
+  crawl2();
 
 
-//  frontrighttoe("level", duration);
-//  frontrighttoe("low", duration);
-//  frontrighttoe("down", duration);
-//  frontrighttoe("level", duration);
-//
-//  frontlefttoe("level", duration);
-//  frontlefttoe("low", duration);
-//  frontlefttoe("down", duration);
-//  frontlefttoe("level", duration);
-//
-//  backlefttoe("level", duration);
-//  backlefttoe("low", duration);
-//  backlefttoe("down", duration);
-//  backlefttoe("level", duration);
-//
-//  backrighttoe("level", duration);
-//  backrighttoe("low", duration);
-//  backrighttoe("down", duration);
-//  backrighttoe("level", duration);
+  //  frontrighttoe("level", duration);
+  //  frontrighttoe("low", duration);
+  //  frontrighttoe("down", duration);
+  //  frontrighttoe("level", duration);
+  //
+  //  frontlefttoe("level", duration);
+  //  frontlefttoe("low", duration);
+  //  frontlefttoe("down", duration);
+  //  frontlefttoe("level", duration);
+  //
+  //  backlefttoe("level", duration);
+  //  backlefttoe("low", duration);
+  //  backlefttoe("down", duration);
+  //  backlefttoe("level", duration);
+  //
+  //  backrighttoe("level", duration);
+  //  backrighttoe("low", duration);
+  //  backrighttoe("down", duration);
+  //  backrighttoe("level", duration);
 
 
   //for(int i=275; i<575;i++){
@@ -469,12 +468,12 @@ void testSeq() {
   //   pwm.setPWM(5, 0, i);
   //   delay(50);
   //}
-  
+
 
 }
 void loop() {
   ledplay();
- stand();
-//  delay(1000);
+  stand();
+  //  delay(1000);
   testSeq();
 }
